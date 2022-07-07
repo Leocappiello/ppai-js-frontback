@@ -21,11 +21,8 @@ class GestorRegistrarReservaTurnoRT {
     tomarOpcionReservarTurnoRT() {
         //3
         let buscarTipo = this.buscarTipoRT()
-        console.log("buscar tipos", buscarTipo);
         return buscarTipo
-        let pantalla = new PantallaRegistrarReservaTurnoRT()
-        //23
-        pantalla.mostrarDatosRTSeleccionado(buscarTipo)
+        //console.log("buscar tipos", buscarTipo);
     }
 
     buscarTipoRT() {
@@ -41,7 +38,6 @@ class GestorRegistrarReservaTurnoRT {
                 dataRT[elem].name,
                 dataRT[elem].type,
                 dataRT[elem].features,
-                //dataRT[elem].estado,
                 new Estado(dataRT[elem].estado.nombre,
                     dataRT[elem].estado.descripcion,
                     dataRT[elem].estado.ambito,
@@ -71,16 +67,21 @@ class GestorRegistrarReservaTurnoRT {
             arrTiposRT.push(tipoRT.getNombre())
         }
 
-        let pantalla = new PantallaRegistrarReservaTurnoRT()
-        let mostrarTipo = pantalla.mostrarTipoRTParaSeleccion(arrTiposRT)
-        return mostrarTipo
+        return arrTiposRT
     }
 
     //10
     tomarSeleccionTipoRT(tipos) {
-        let tipoSeleccionado = tipos[0] //ejemplo de seleccion
+        let tipoSeleccionado = tipos
         let tomarSeleccion = this.buscarEstadoDisponible(tipoSeleccionado)
-        return tomarSeleccion
+        let arr = []
+        tomarSeleccion.map(elem => {
+            elem.forEach(recurso => {
+                arr.push(recurso)
+            })
+        })
+
+        return arr
     }
 
     //10
@@ -278,8 +279,18 @@ class GestorRegistrarReservaTurnoRT {
             }
         }
 
-        console.log("recursos del CI", recursosDelCI);
-        this.obtenerTurnosRTSeleccionado(seleccion)
+        let arrRecursosDelCi = []
+        recursosDelCI.map(elem => {
+            elem.forEach(cientifico => {
+                arrRecursosDelCi.push(cientifico)
+            })
+        })
+
+        //console.log("cientificos del CI", arrRecursosDelCi);
+
+        //console.log(seleccion);
+        //console.log(this.obtenerTurnosRTSeleccionado(seleccion));
+        return this.obtenerTurnosRTSeleccionado(seleccion)
     }
 
     obtenerTurnosRTSeleccionado(seleccion) {
@@ -298,7 +309,7 @@ class GestorRegistrarReservaTurnoRT {
             fechaAlta,
             respTecRecurso,
             disponibility,
-            pathImages } = seleccion[0]
+            pathImages } = seleccion
 
         let recursos = new RecursoTecnologico(
             id,
@@ -316,8 +327,8 @@ class GestorRegistrarReservaTurnoRT {
         )
 
         let turnosPosteriores = recursos.getTurnosPosteriores(fechaActual, horaActual)
-        let pantalla = new PantallaRegistrarReservaTurnoRT()
-        pantalla.mostrarTurnosParaSeleccion(turnosPosteriores)
+        return turnosPosteriores
+        //console.log(turnosPosteriores);
     }
 
     getFechaActual() {
@@ -339,7 +350,7 @@ class GestorRegistrarReservaTurnoRT {
         //console.log(seleccion);
         let turno = seleccion
         turno.mostrarTurno()
-        console.log("turno seleccionado", seleccion);
+        //console.log("turno seleccionado", seleccion);
 
         let pantalla = new PantallaRegistrarReservaTurnoRT()
         pantalla.solicitarOpcionNotificacion()
@@ -374,7 +385,7 @@ class GestorRegistrarReservaTurnoRT {
             seleccionado.fechaHoraInicio,
             seleccionado.fechaHoraFin,
             nuevoEstado)
-        console.log("turno a reservar",turno);
+        //console.log("turno a reservar",turno);
         turno.reservarTurno(seleccionado)
     }
 
@@ -396,13 +407,11 @@ class PantallaRegistrarReservaTurnoRT {
     }
 
     opcionReservarTurnoRT() {
-        console.log('1. se abre ventana y se toca opcion')
         //1
         return this.habilitarVentana()
     }
 
     habilitarVentana() {
-        console.log('2. se habilita ventana y se llama gestor para traer rts')
         //2
         let gestor = new GestorRegistrarReservaTurnoRT()
         return gestor.tomarOpcionReservarTurnoRT()
@@ -424,20 +433,18 @@ class PantallaRegistrarReservaTurnoRT {
 
     mostrarDatosRTSeleccionado(tiposAMostrar) {
         //console.log("tipos a mostrar", tiposAMostrar);
-        this.tomarRTAUtilizar(tiposAMostrar)
+        return this.tomarRTAUtilizar(tiposAMostrar)
     }
 
     tomarRTAUtilizar(tiposAMostrar) {
-        let random = Math.floor(Math.random() * 1) //
         let gestor = new GestorRegistrarReservaTurnoRT()
-        gestor.verificarPerteneceCI(tiposAMostrar[random])
+        return gestor.verificarPerteneceCI(tiposAMostrar)
     }
 
     mostrarTurnosParaSeleccion(turnosPosteriores) {
         //console.log("turnos posteriores", turnosPosteriores);
-        let seleccion = turnosPosteriores[0]
         let gestor = new GestorRegistrarReservaTurnoRT()
-        gestor.buscarDatosTurnoSeleccionado(seleccion)
+        return gestor.buscarDatosTurnoSeleccionado(seleccion)
     }
 
     tomarTurnoSeleccionado() {
@@ -462,8 +469,75 @@ class PantallaRegistrarReservaTurnoRT {
 router.get('/tipos', (req, res) => {
     pantalla = new PantallaRegistrarReservaTurnoRT()
     let response = pantalla.opcionReservarTurnoRT()
-    console.log("respuesta", response);
+    //console.log("respuesta", response);
     res.json(response)
+})
+
+router.post('/tipos/:tipoSeleccionado', (req, res) => {
+    const { tipoSeleccionado } = req.params
+    pantalla = new PantallaRegistrarReservaTurnoRT()
+    let response = pantalla.tomarSeleccionTipoRT(tipoSeleccionado)
+    //console.log("response",response);mostrarDatosRTSeleccionado
+    res.json(response)
+})
+
+router.get('/recursos/:recurso', (req, res) => {
+    let pantalla = new PantallaRegistrarReservaTurnoRT()
+    let buscarTipo = {
+        "id": 99,
+        "name": "Balanza",
+        "modelo": {
+            "nombre": "Balanza",
+            "marca": {
+                "nombre": "Shidmazu"
+            }
+        },
+        "marca": "Shidmazu",
+        "type": "Balanza_de_precisión",
+        "features": {
+            "capacidad": "620g",
+            "Indicación mínima": "0.01g",
+            "Repetitividad": "menor o igual a 0.01 g",
+            "Linealidad": "0.02 g",
+            "Tiempo de respuesta:": "2.0 segundos",
+            "Monitor": "LCD con luz negra",
+            "Dimensiones del plato de la balanza": "110mm de diametro",
+            "Peso del equipo": "1.55 kg"
+        },
+        "estado": "nombre",
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    }
+    let response = pantalla.mostrarDatosRTSeleccionado(buscarTipo)
+    res.json(response)
+    //console.log("response recursos", response)
+})
+
+
+router.get('/recursos/:recurso', (req, res) => {
+    let pantalla = new PantallaRegistrarReservaTurnoRT()
+    let turno = {
+        "fechaGeneracion": "08/07/2022",
+        "diaSemana": "",
+        "fechaHoraInicio": "00:00",
+        "fechaHoraFin": "23:59",
+        "estado": "disponible"
+    }
+    let response = pantalla.mostrarTurnosParaSeleccion(turno)
+
+    res.json(response)
+    //console.log("response recursos", response)
 })
 
 

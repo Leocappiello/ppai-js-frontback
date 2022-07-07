@@ -4,7 +4,7 @@
         "name": "Balanza",
         "modelo": "TXB622L",
         "marca": "Shidmazu",
-        "type": "Balanza de precisión",
+        "type": "Balanza_de_precisión",
         "features": {
             "capacidad": "620g",
             "Indicación mínima": "0.01g",
@@ -41,7 +41,7 @@
         "name": "Balanza",
         "modelo": "TXB622L",
         "marca": "Shidmazu",
-        "type": "Balanza de precisión",
+        "type": "Balanza_de_precisión",
         "features": {
             "capacidad": "620g",
             "Indicación mínima": "0.01g",
@@ -78,7 +78,7 @@
         "name": "Microscopio",
         "modelo": "Modelo MM-400/800",
         "marca": "Nikon",
-        "type": "Microscopio de medición",
+        "type": "Microscopio_de_medición",
         "features": {
             "Contador con lectura": "0.1μm",
             "Pantalla LCD": "320x240 píxeles",
@@ -113,7 +113,7 @@
         "name": "Microscopio",
         "modelo": "MM-400/800",
         "marca": "Nikon",
-        "type": "Microscopio de medición",
+        "type": "Microscopio_de_medición",
         "features": {
             "Contador con lectura": "0.1μm",
             "Pantalla LCD": "320x240 píxeles",
@@ -148,7 +148,7 @@
         "name": "Balanza",
         "marca": "Shidmazu",
         "Modelo": "TXB622L",
-        "type": "Balanza de precisión",
+        "type": "Balanza_de_precisión",
         "features": {
             "capacidad": "620g",
             "Indicación mínima": "0.01g",

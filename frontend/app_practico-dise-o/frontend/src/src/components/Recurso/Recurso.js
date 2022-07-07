@@ -9,14 +9,24 @@ const Recurso = () => {
   const [tipoRecurso, SetTipoRecurso] = useState('')
   const [value, setValue] = useState();
   const [resource, setResource] = useState([])
+  const [arrResource, setArrResource] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/tipos')
-      .then((res) => res.json())
-      .then(data => setResource(data))
-      .then(data => console.log(data))
-  }, [])
+    const fetchData = async () => {
+      let url = `http://localhost:3000/tipos`
+      const response = await fetch(url);
+      const newData = await response.json();
+      setResource(newData)
+    };
 
+    fetchData();
+    extractValues(resource)
+    console.log(arrResource);
+  })
+
+  function extractValues(resource){
+    console.log("recurso",resource);
+  }
 
   const onSelectChange = (value) => {
     SetTipoRecurso(value.value)
@@ -30,7 +40,15 @@ const Recurso = () => {
       <h1 className='mt-5 ms-5' >Selección de tipo de recurso</h1>
       <div >
         <div style={{ width: '300px', margin: '0 auto' }}>
-          <Select value={value} onChange={onSelectChange} />
+          {
+            resource.map((elem) => {
+              return (elem.map(resource => {
+                <div>
+                  <p>{resource.type}</p>
+                </div>
+              }))
+            })
+          }
         </div>
         <>
           {tipoRecurso ? <RecursoSeleccionado tipoRecurso={tipoRecurso} /> : <></>}
