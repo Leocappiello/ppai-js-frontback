@@ -1,0 +1,65 @@
+[
+    {
+        "nombre": "a",
+        "sigla": "a",
+        "direccion": "a",
+        "edificio": "a",
+        "piso": "a",
+        "coordenadas": "a",
+        "telefonosContacto": "a",
+        "correoElectronico": "a",
+        "numeroResolucionCreacion": "a",
+        "fechaResolucionCreacion": "a",
+        "reglamento": "a",
+        "caracteristicasGenerales": "a",
+        "fechaAlta": "a",
+        "tiempoAntelacionReserva": "a",
+        "fechaBaja": "a",
+        "motivoBaja": "a",
+        "recursosTecnologicos":{
+            "RT": [0]   
+        }
+    },
+    {
+        "nombre": "b",
+        "sigla": "b",
+        "direccion": "b",
+        "edificio": "b",
+        "piso": "b",
+        "coordenadas": "b",
+        "telefonosContacto": "b",
+        "correoElectronico": "b",
+        "numeroResolucionCreacion": "b",
+        "fechaResolucionCreacion": "b",
+        "reglamento": "b",
+        "caracteristicasGenerales": "b",
+        "fechaAlta": "b",
+        "tiempoAntelacionReserva": "b",
+        "fechaBaja": "b",
+        "motivoBaja": "b",
+        "recursosTecnologicos":{
+            "RT": []   
+        }
+    },
+    {
+        "nombre": "c",
+        "sigla": "c",
+        "direccion": "c",
+        "edificio": "c",
+        "piso": "c",
+        "coordenadas": "c",
+        "telefonosContacto": "c",
+        "correoElectronico": "c",
+        "numeroResolucionCreacion": "c",
+        "fechaResolucionCreacion": "c",
+        "reglamento": "c",
+        "caracteristicasGenerales": "c",
+        "fechaAlta": "c",
+        "tiempoAntelacionReserva": "c",
+        "fechaBaja": "c",
+        "motivoBaja": "c",
+        "recursosTecnologicos":{
+            "RT": [1,5]   
+        }
+    }
+]

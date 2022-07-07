@@ -1,0 +1,183 @@
+[
+    {
+        "id": 0,
+        "name": "Balanza",
+        "modelo": "TXB622L",
+        "marca": "Shidmazu",
+        "type": "Balanza de precisión",
+        "features": {
+            "capacidad": "620g",
+            "Indicación mínima": "0.01g",
+            "Repetitividad": "menor o igual a 0.01 g",
+            "Linealidad": "0.02 g",
+            "Tiempo de respuesta:": "2.0 segundos",
+            "Monitor": "LCD con luz negra",
+            "Dimensiones del plato de la balanza": "110mm de diametro",
+            "Peso del equipo": "1.55 kg"
+        },
+        "estado": {
+            "nombre": "disponible",
+            "descripcion": "disponible",
+            "ambito": "ambito disponible",
+            "esReservable": true,
+            "esCancelable": false
+        },
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    },
+    {
+        "id": 1,
+        "name": "Balanza",
+        "modelo": "TXB622L",
+        "marca": "Shidmazu",
+        "type": "Balanza de precisión",
+        "features": {
+            "capacidad": "620g",
+            "Indicación mínima": "0.01g",
+            "Repetitividad": "menor o igual a 0.01 g",
+            "Linealidad": "0.02 g",
+            "Tiempo de respuesta:": "2.0 segundos",
+            "Monitor": "LCD con luz negra",
+            "Dimensiones del plato de la balanza": "110mm de diametro",
+            "Peso del equipo": "1.55 kg"
+        },
+        "estado": {
+            "nombre": "no disponible",
+            "descripcion": "disponible",
+            "ambito": "ambito no disponible",
+            "esReservable": true,
+            "esCancelable": false
+        },
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    },
+    {
+        "id": 2,
+        "name": "Microscopio",
+        "modelo": "Modelo MM-400/800",
+        "marca": "Nikon",
+        "type": "Microscopio de medición",
+        "features": {
+            "Contador con lectura": "0.1μm",
+            "Pantalla LCD": "320x240 píxeles",
+            "Velocidad de enfoque": "0.5 segundos",
+            "Repetibilidad de enfoque": "hasta 0.5 μm",
+            "Velocidad de movimiento vertical": "10 mm/seg",
+            "Platina": "12 X 6"
+        },
+        "estado": {
+            "nombre": "no disponible",
+            "descripcion": "no disponible",
+            "ambito": "ambito no disponible",
+            "esReservable": false,
+            "esCancelable": true
+        },
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    },
+    {
+        "id": 3,
+        "name": "Microscopio",
+        "modelo": "MM-400/800",
+        "marca": "Nikon",
+        "type": "Microscopio de medición",
+        "features": {
+            "Contador con lectura": "0.1μm",
+            "Pantalla LCD": "320x240 píxeles",
+            "Velocidad de enfoque": "0.5 segundos",
+            "Repetibilidad de enfoque": "hasta 0.5 μm",
+            "Velocidad de movimiento vertical": "10 mm/seg",
+            "Platina": "12 X 6"
+        },
+        "estado": {
+            "nombre": "no disponible",
+            "descripcion": "no disponible",
+            "ambito": "ambito no disponible",
+            "esReservable": false,
+            "esCancelable": true
+        },
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    },
+    {
+        "id": 5,
+        "name": "Balanza",
+        "marca": "Shidmazu",
+        "Modelo": "TXB622L",
+        "type": "Balanza de precisión",
+        "features": {
+            "capacidad": "620g",
+            "Indicación mínima": "0.01g",
+            "Repetitividad": "menor o igual a 0.01 g",
+            "Linealidad": "0.02 g",
+            "Tiempo de respuesta:": "2.0 segundos",
+            "Monitor": "LCD con luz negra",
+            "Dimensiones del plato de la balanza": "110mm de diametro",
+            "Peso del equipo": "1.55 kg"
+        },
+        "estado": {
+            "nombre": "disponible",
+            "descripcion": "disponible",
+            "ambito": "ambito disponible",
+            "esReservable": true,
+            "esCancelable": false
+        },
+        "nroInventory": 0,
+        "fechaAlta": "01/01/2022",
+        "respTecRecurso": "",
+        "disponibility": {
+            "lunes": {},
+            "martes": {},
+            "miercoles": {},
+            "jueves": {},
+            "viernes": {},
+            "sabado": {},
+            "domingo": {}
+        },
+        "pathImages": {}
+    }
+]

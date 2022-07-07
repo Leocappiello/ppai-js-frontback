@@ -1,0 +1,23 @@
+[
+    {
+        "fechaGeneracion": "04/07/2022",
+        "diaSemana": "Lunes",
+        "fechaHoraInicio": "00:00",
+        "fechaHoraFin": "23:59",
+        "estado": "reservado"
+    },
+    {
+        "fechaGeneracion": "05/07/2022",
+        "diaSemana": "",
+        "fechaHoraInicio": "00:00",
+        "fechaHoraFin": "23:59",
+        "estado": "disponible"
+    },
+    {
+        "fechaGeneracion": "08/07/2022",
+        "diaSemana": "",
+        "fechaHoraInicio": "00:00",
+        "fechaHoraFin": "23:59",
+        "estado": "disponible"
+    }
+]

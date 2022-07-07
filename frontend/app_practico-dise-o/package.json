@@ -1,0 +1,22 @@
+{
+  "name": "ppai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/interaction": "^5.11.0",
+    "@fullcalendar/react": "^5.11.1",
+    "bootstrap": "^5.2.0-beta1",
+    "react-hook-form": "^7.33.1",
+    "react-router-dom": "^6.3.0",
+    "react-select": "^5.4.0",
+    "sweetalert2": "^11.4.20"
+  }
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "legajo": 123,
+        "nombre": "nombre1",
+        "apellido": "apellido1",
+        "nroDocumento": 12345678,
+        "correoElectronicoInstitucional": "qwerty@asd.com",
+        "correoElectronicoPersonal": "qwerty@asd.com",
+        "telefonoCelular": 123456789
+    },
+    {
+        "legajo": 456,
+        "nombre": "nombre2",
+        "apellido": "apellido2",
+        "nroDocumento": 12345679,
+        "correoElectronicoInstitucional": "qwerty@asd.com",
+        "correoElectronicoPersonal": "qwerty@asd.com",
+        "telefonoCelular": 123456789
+    }
+]
